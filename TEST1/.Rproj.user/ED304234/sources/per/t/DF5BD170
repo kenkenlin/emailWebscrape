@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527349830944.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3363679087",
+    "id" : "DF5BD170",
+    "lastKnownWriteTime" : 1527399713,
+    "last_content_update" : 1527399713535,
+    "path" : "~/TEST1/TTT.R",
+    "project_path" : "TTT.R",
+    "properties" : {
+        "cursorPosition" : "158,0",
+        "scrollLine" : "133",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
