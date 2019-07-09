@@ -1,0 +1,10 @@
+#Python 
+	1.gmail(這package不太好裝，我看不太懂到底要怎麼搞)
+	  https://github.com/charlierguo/gmail
+
+	2.selenium(這個package 資料很多 也很多程式碼可以參考，我隨便貼一個)
+	  https://crossbrowsertesting.com/blog/test-automation/automate-login-with-selenium/
+
+#R
+	1.RSelenium
+	  https://blog.gtwang.org/r/rselenium-r-selenium-browser-web-scraping-tutorial/
