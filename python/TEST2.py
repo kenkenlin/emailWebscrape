@@ -26,3 +26,4 @@ element3.click();
 element3.send_keys("aa225456");
 contain_next_button = driver.find_element_by_name("nvp_site_mail");
 contain_next_button.click();
+print("你Hello, World!")
