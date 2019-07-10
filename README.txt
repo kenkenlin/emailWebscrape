@@ -12,8 +12,13 @@
 
 
 
-
-
+把上面 ▲
+	|
+	|
+	|
+	|
+放到Rstudio裡面
+	https://buzzorange.com/techorange/2018/04/23/python-in-r/
 #R
 	1.RSelenium
 	  https://blog.gtwang.org/r/rselenium-r-selenium-browser-web-scraping-tutorial/
