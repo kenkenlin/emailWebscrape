@@ -4,6 +4,15 @@
 
 	2.selenium(這個package 資料很多 也很多程式碼可以參考，我隨便貼一個)
 	  https://crossbrowsertesting.com/blog/test-automation/automate-login-with-selenium/
+	
+	#selenium教學
+	 1.https://medium.com/@NorthBei/在windows上安裝python-selenium-簡易教學-eade1cd2d12d
+         2.http://yhhuang1966.blogspot.com/2018/05/python-selenium_27.html
+	 3.https://www.youtube.com/watch?v=rGFB34c6vso
+
+
+
+
 
 #R
 	1.RSelenium
