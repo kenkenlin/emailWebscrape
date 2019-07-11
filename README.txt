@@ -22,3 +22,6 @@
 #R
 	1.RSelenium
 	  https://blog.gtwang.org/r/rselenium-r-selenium-browser-web-scraping-tutorial/
+
+	2.reticulate (get some problems)
+	https://github.com/rstudio/reticulate/issues/385
