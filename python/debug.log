@@ -1,2 +1,6 @@
 [0711/084438.150:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
 [0711/084438.159:ERROR:exception_snapshot_win.cc(98)] thread ID 11944 not found in process
+[0712/001223.119:ERROR:process_reader_win.cc(151)] SuspendThread: 存取被拒。 (0x5)
+[0712/001223.121:ERROR:process_reader_win.cc(151)] SuspendThread: 存取被拒。 (0x5)
+[0712/001223.121:ERROR:process_reader_win.cc(123)] NtOpenThread: {拒絕存取} 程序已請求存取一物件，但未被授與存取權。 (0xc0000022)
+[0712/001223.121:ERROR:exception_snapshot_win.cc(98)] thread ID 9476 not found in process
