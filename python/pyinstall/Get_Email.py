@@ -4,11 +4,12 @@ import imaplib
 import mailbox
 import pandas as pd
 import os
+import getpass
 
 os.getcwd()
 
-EMAIL_ACCOUNT = input("輸入：\n")
-PASSWORD = input("輸入密碼：\n")
+EMAIL_ACCOUNT = input("輸入帳號包含@example.com：\n")
+PASSWORD = getpass.getpass("輸入密碼：\n")
 
 os.system("pause")
 
@@ -23,7 +24,8 @@ NameEmail = []
 Content = []
 Dict = {}
 
-for x in range(i-1, i-100, -1):
+
+for x in range(i-1, i-200, -1):
     latest_email_uid = data[0].split()[x]
     result, email_data = mail.uid('fetch', latest_email_uid, '(RFC822)')
     raw_email = email_data[0][1]
@@ -42,7 +44,7 @@ for x in range(i-1, i-100, -1):
     try:
         email_from = str(email.header.make_header(email.header.decode_header(email_message['From'])))
         subject = str(email.header.make_header(email.header.decode_header(email_message['Subject'])))
-        NameEmail.append(email_from)  
+        NameEmail.append(email_from.strip('"').lstrip().rstrip())  
         Content.append(subject)
     except:
         NameEmail.append('N/A')
@@ -65,6 +67,8 @@ print("正在搜尋關鍵字為",
       "的郵件")
 os.system("pause")
 #輸出CSV
+df_split = df_2["Name&Email"].str.split("<", n = 1, expand = True) 
+df_2['Name'] = df_split[0].str.rstrip(' "')
+df_2['Email'] = df_split[1].str.rstrip('>')
+df_2.drop(columns =["Name&Email"], inplace = True) 
 df_2.to_csv('Target.csv', encoding = 'utf_8_sig')
-
-

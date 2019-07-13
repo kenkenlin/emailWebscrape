@@ -4,6 +4,7 @@ import imaplib
 import mailbox
 import pandas as pd
 import os
+import getpass
 
 os.getcwd()
 

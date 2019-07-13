@@ -12,7 +12,9 @@
 ## IMAP 插件
 	https://codehandbook.org/how-to-read-email-from-gmail-using-python/?fbclid=IwAR25NI-diuhwrXlGLTU_p-UIu9sdL0XscAkD4vx_LpXhVswFuRMBcMkc7s8
 
-
+## 輸出成EXE
+	http://keejko.blogspot.com/2017/12/python_14.html
+如果有問題的話 有些插件可能要用cmd的方式重新安裝
 把上面 ▲
 	|
 	|

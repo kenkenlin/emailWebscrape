@@ -4,11 +4,12 @@ import imaplib
 import mailbox
 import pandas as pd
 import os
+import getpass
 
 os.getcwd()
 
-EMAIL_ACCOUNT = "aa225456@gmail.com"
-PASSWORD = input("輸入密碼：")
+EMAIL_ACCOUNT = input("輸入帳號包含@example.com：\n")
+PASSWORD = getpass.getpass("輸入密碼：\n")
 
 os.system("pause")
 
@@ -23,11 +24,8 @@ NameEmail = []
 Content = []
 Dict = {}
 
-<<<<<<< HEAD:python/GetEmail_Final.py
-for x in range(9857, 9657, -1):
-=======
-for x in range(i-1, 0, -1):
->>>>>>> 9f72562320b9eb28d2689b4a03daf57ff924c5f2:python/GetEmail.py
+
+for x in range(i-1, i-200, -1):
     latest_email_uid = data[0].split()[x]
     result, email_data = mail.uid('fetch', latest_email_uid, '(RFC822)')
     raw_email = email_data[0][1]
@@ -74,14 +72,3 @@ df_2['Name'] = df_split[0].str.rstrip(' "')
 df_2['Email'] = df_split[1].str.rstrip('>')
 df_2.drop(columns =["Name&Email"], inplace = True) 
 df_2.to_csv('Target.csv', encoding = 'utf_8_sig')
-
-
-<<<<<<< HEAD:python/GetEmail_Final.py
-
-
- 
-
-
-
-=======
->>>>>>> 9f72562320b9eb28d2689b4a03daf57ff924c5f2:python/GetEmail.py
