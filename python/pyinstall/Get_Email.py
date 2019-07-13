@@ -7,7 +7,7 @@ import os
 
 os.getcwd()
 
-EMAIL_ACCOUNT = "aa225456@gmail.com"
+EMAIL_ACCOUNT = input("輸入：\n")
 PASSWORD = input("輸入密碼：\n")
 
 os.system("pause")
@@ -23,7 +23,7 @@ NameEmail = []
 Content = []
 Dict = {}
 
-for x in range(i-1, 0, -1):
+for x in range(i-1, i-100, -1):
     latest_email_uid = data[0].split()[x]
     result, email_data = mail.uid('fetch', latest_email_uid, '(RFC822)')
     raw_email = email_data[0][1]
