@@ -5,6 +5,7 @@ import mailbox
 import pandas as pd
 import os
 import getpass
+import tqdm
 
 os.getcwd()
 
@@ -12,6 +13,7 @@ EMAIL_ACCOUNT = input("輸入帳號包含@example.com：\n")
 PASSWORD = getpass.getpass("輸入密碼：\n")
 
 os.system("pause")
+
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
 mail.login(EMAIL_ACCOUNT, PASSWORD)
@@ -25,7 +27,7 @@ Content = []
 Dict = {}
 
 
-for x in range(i-1, i-200, -1):
+for x in range(i-200, i-1, 1):
     latest_email_uid = data[0].split()[x]
     result, email_data = mail.uid('fetch', latest_email_uid, '(RFC822)')
     raw_email = email_data[0][1]
