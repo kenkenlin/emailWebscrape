@@ -6,6 +6,8 @@ import pandas as pd
 import os
 import getpass
 import tqdm
+import time
+import sys
 
 os.getcwd()
 
@@ -26,8 +28,9 @@ NameEmail = []
 Content = []
 Dict = {}
 
+ttrange = 0
 
-for x in range(i-200, i-1, 1):
+for x in range(i-1, i-200,  1):
     latest_email_uid = data[0].split()[x]
     result, email_data = mail.uid('fetch', latest_email_uid, '(RFC822)')
     raw_email = email_data[0][1]
@@ -39,7 +42,9 @@ for x in range(i-200, i-1, 1):
         except:
             raw_email_string = " "
     finally:
-        print(x)
+        ttrange=ttrange+1
+        sys.stdout.write("\r%d/200" % ttrange)
+        sys.stdout.flush()
         
     email_message = email.message_from_string(raw_email_string)
     
@@ -73,5 +78,7 @@ df_split = df_2["Name&Email"].str.split("<", n = 1, expand = True)
 df_2['Name'] = df_split[0].str.rstrip(' "')
 df_2['Email'] = df_split[1].str.rstrip('>')
 df_2.drop(columns =["Name&Email"], inplace = True) 
+last_col = df_2.pop(df_2.columns[0])
+df_2.insert(2, last_col.name, last_col)
 df_2.to_csv('Target.csv', encoding = 'utf_8_sig')
 os.system("pause")

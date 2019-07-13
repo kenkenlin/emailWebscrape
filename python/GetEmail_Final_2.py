@@ -4,13 +4,18 @@ import imaplib
 import mailbox
 import pandas as pd
 import os
+import getpass
+import tqdm
+import time
+import sys
 
 os.getcwd()
 
-EMAIL_ACCOUNT = "aa225456@gmail.com"
-PASSWORD = input("輸入密碼：")
+EMAIL_ACCOUNT = input("輸入帳號包含@example.com：\n")
+PASSWORD = getpass.getpass("輸入密碼：\n")
 
 os.system("pause")
+
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
 mail.login(EMAIL_ACCOUNT, PASSWORD)
@@ -23,11 +28,9 @@ NameEmail = []
 Content = []
 Dict = {}
 
-<<<<<<< HEAD:python/GetEmail_Final.py
-for x in range(9857, 9657, -1):
-=======
-for x in range(i-1, 0, -1):
->>>>>>> 9f72562320b9eb28d2689b4a03daf57ff924c5f2:python/GetEmail.py
+ttrange = 0
+
+for x in range(i-1, i-200, -1):
     latest_email_uid = data[0].split()[x]
     result, email_data = mail.uid('fetch', latest_email_uid, '(RFC822)')
     raw_email = email_data[0][1]
@@ -39,7 +42,9 @@ for x in range(i-1, 0, -1):
         except:
             raw_email_string = " "
     finally:
-        print(x)
+        ttrange=ttrange+1
+        sys.stdout.write("\r%d/200" % ttrange)
+        sys.stdout.flush()
         
     email_message = email.message_from_string(raw_email_string)
     
@@ -76,14 +81,4 @@ df_2.drop(columns =["Name&Email"], inplace = True)
 last_col = df_2.pop(df_2.columns[0])
 df_2.insert(2, last_col.name, last_col)
 df_2.to_csv('Target.csv', encoding = 'utf_8_sig')
-
-
-<<<<<<< HEAD:python/GetEmail_Final.py
-
-
- 
-
-
-
-=======
->>>>>>> 9f72562320b9eb28d2689b4a03daf57ff924c5f2:python/GetEmail.py
+os.system("pause")
