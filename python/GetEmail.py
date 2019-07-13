@@ -17,12 +17,11 @@ mail.select('inbox')
 result, data = mail.uid('search', None, "ALL") # (ALL/UNSEEN)
 i = len(data[0].split())
 
-Name = []
-Email = []
+NameEmail = []
 Content = []
 Dict = {}
 
-for x in range(i-1, 8857, -1):
+for x in range(9500, 9400, -1):
     latest_email_uid = data[0].split()[x]
     result, email_data = mail.uid('fetch', latest_email_uid, '(RFC822)')
     raw_email = email_data[0][1]
@@ -41,16 +40,13 @@ for x in range(i-1, 8857, -1):
     try:
         email_from = str(email.header.make_header(email.header.decode_header(email_message['From'])))
         subject = str(email.header.make_header(email.header.decode_header(email_message['Subject'])))
-        Name.append(email_from.split('<')[0])  
-        Email.append(email_from.split('<')[1].strip()[:-1])
+        NameEmail.append(email_from.split('<')[0])  
         Content.append(subject)
     except:
-        Name.append('N/A')
-        Email.append('N/A')
+        NameEmail.append('N/A')
         Content.append('N/A')
 
-Dict = {"Name":Name,
-        "Email":Email,
+Dict = {"Name&Email":NameEmail,
         "Content":Content}
     
 df = pd.DataFrame(Dict)
