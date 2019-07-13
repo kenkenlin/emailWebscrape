@@ -40,7 +40,7 @@ for x in range(i-1, 0, -1):
     try:
         email_from = str(email.header.make_header(email.header.decode_header(email_message['From'])))
         subject = str(email.header.make_header(email.header.decode_header(email_message['Subject'])))
-        NameEmail.append(email_from.split('<')[0])  
+        NameEmail.append(email_from)  
         Content.append(subject)
     except:
         NameEmail.append('N/A')
@@ -49,6 +49,19 @@ for x in range(i-1, 0, -1):
 Dict = {"Name&Email":NameEmail,
         "Content":Content}
     
-df = pd.DataFrame(Dict)
+df = pd.DataFrame(Dict, index=None)
 df.index +=1
-df.to_csv('Result.csv', encoding = 'utf_8_sig')
+
+#篩選字串並製作新的DF
+targets = ['Uber', 'Facebook']
+df_2 = df[df['Name&Email'].apply(lambda sentence: any(word in sentence for word in targets))]
+
+#輸出CSV
+df_2.to_csv('Target.csv', encoding = 'utf_8_sig')
+
+
+
+
+
+
+
