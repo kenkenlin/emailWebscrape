@@ -7,8 +7,8 @@ import os
 
 os.getcwd()
 
-EMAIL_ACCOUNT = "x91003502@gmail.com"
-PASSWORD = "xxx"
+EMAIL_ACCOUNT = "aa225456@gmail.com"
+PASSWORD = "xx3"
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
 mail.login(EMAIL_ACCOUNT, PASSWORD)
@@ -21,7 +21,7 @@ NameEmail = []
 Content = []
 Dict = {}
 
-for x in range(9500, 9400, -1):
+for x in range(i-1, 0, -1):
     latest_email_uid = data[0].split()[x]
     result, email_data = mail.uid('fetch', latest_email_uid, '(RFC822)')
     raw_email = email_data[0][1]
