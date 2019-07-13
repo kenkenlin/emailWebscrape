@@ -13,6 +13,8 @@
 	 3.https://www.youtube.com/watch?v=rGFB34c6vso
 ## IMAP 插件
 	https://codehandbook.org/how-to-read-email-from-gmail-using-python/?fbclid=IwAR25NI-diuhwrXlGLTU_p-UIu9sdL0XscAkD4vx_LpXhVswFuRMBcMkc7s8
+##Python 字串處理的小技巧
+	https://blog.csdn.net/qq_28219759/article/details/52919233
 
 ## 輸出成EXE
 	http://keejko.blogspot.com/2017/12/python_14.html
@@ -26,8 +28,7 @@
 	https://buzzorange.com/techorange/2018/04/23/python-in-r/
 
 
-##Python 字串處理的小技巧
-	https://blog.csdn.net/qq_28219759/article/details/52919233
+
 # R
 ## 1.RSelenium
 	https://blog.gtwang.org/r/rselenium-r-selenium-browser-web-scraping-tutorial/
