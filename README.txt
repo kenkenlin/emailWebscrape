@@ -25,3 +25,6 @@
 
 	2.reticulate (get some problems)
 	https://github.com/rstudio/reticulate/issues/385
+
+	3.gmailr
+	https://embracingtherandom.com/r/web-scraping/email/apis/trying-to-get-to-the-top-of-r-bloggers-emails/
