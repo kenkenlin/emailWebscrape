@@ -40,7 +40,7 @@ for x in range(9500, 9400, -1):
     try:
         email_from = str(email.header.make_header(email.header.decode_header(email_message['From'])))
         subject = str(email.header.make_header(email.header.decode_header(email_message['Subject'])))
-        NameEmail.append(email_from.split('<')[0])  
+        NameEmail.append(email_from)  
         Content.append(subject)
     except:
         NameEmail.append('N/A')
