@@ -1,6 +1,8 @@
 # Python 
 ## gmail(這package不太好裝，我看不太懂到底要怎麼搞)
 	  https://github.com/charlierguo/gmail
+## gmail 安全性
+	https://myaccount.google.com/lesssecureapps
 
 ## selenium(這個package 資料很多 也很多程式碼可以參考，我隨便貼一個)
 	  https://crossbrowsertesting.com/blog/test-automation/automate-login-with-selenium/
@@ -22,6 +24,10 @@
 	|
 放到Rstudio裡面
 	https://buzzorange.com/techorange/2018/04/23/python-in-r/
+
+
+##Python 字串處理的小技巧
+	https://blog.csdn.net/qq_28219759/article/details/52919233
 # R
 ## 1.RSelenium
 	https://blog.gtwang.org/r/rselenium-r-selenium-browser-web-scraping-tutorial/
