@@ -49,6 +49,19 @@ for x in range(9500, 9400, -1):
 Dict = {"Name&Email":NameEmail,
         "Content":Content}
     
-df = pd.DataFrame(Dict)
+df = pd.DataFrame(Dict, index=None)
 df.index +=1
-df.to_csv('Result.csv', encoding = 'utf_8_sig')
+
+#篩選字串並製作新的DF
+targets = ['Uber', 'Facebook']
+df_2 = df[df['Name&Email'].apply(lambda sentence: any(word in sentence for word in targets))]
+
+#輸出CSV
+df_2.to_csv('Target.csv', encoding = 'utf_8_sig')
+
+
+
+
+
+
+
