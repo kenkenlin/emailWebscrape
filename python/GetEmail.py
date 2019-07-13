@@ -8,7 +8,9 @@ import os
 os.getcwd()
 
 EMAIL_ACCOUNT = "aa225456@gmail.com"
-PASSWORD = "xx3"
+PASSWORD = input("輸入密碼：")
+
+os.system("pause")
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
 mail.login(EMAIL_ACCOUNT, PASSWORD)
@@ -53,15 +55,16 @@ df = pd.DataFrame(Dict, index=None)
 df.index +=1
 
 #篩選字串並製作新的DF
-targets = ['Uber', 'Facebook']
+tar = input("輸入要搜索的關鍵字\n(若為負數請以："" , "" 逗號 )作為分隔：\n")
+tar = tar.split(',')
+targets = tar
+print(targets)
 df_2 = df[df['Name&Email'].apply(lambda sentence: any(word in sentence for word in targets))]
-
+print("正在搜尋關鍵字為",
+          targets,
+      "的郵件")
+os.system("pause")
 #輸出CSV
 df_2.to_csv('Target.csv', encoding = 'utf_8_sig')
-
-
-
-
-
 
 

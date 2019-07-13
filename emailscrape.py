@@ -4,7 +4,7 @@ import imaplib
 import mailbox
 
 EMAIL_ACCOUNT = "aa225456@gmail.com"
-PASSWORD = "mxxxxx"
+PASSWORD = "xx3"
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
 mail.login(EMAIL_ACCOUNT, PASSWORD)
