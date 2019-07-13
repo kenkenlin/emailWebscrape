@@ -1,6 +1,8 @@
 # Python 
 ## gmail(這package不太好裝，我看不太懂到底要怎麼搞)
 	  https://github.com/charlierguo/gmail
+## gmail 安全性
+	https://myaccount.google.com/lesssecureapps
 
 ## selenium(這個package 資料很多 也很多程式碼可以參考，我隨便貼一個)
 	  https://crossbrowsertesting.com/blog/test-automation/automate-login-with-selenium/
@@ -11,6 +13,8 @@
 	 3.https://www.youtube.com/watch?v=rGFB34c6vso
 ## IMAP 插件
 	https://codehandbook.org/how-to-read-email-from-gmail-using-python/?fbclid=IwAR25NI-diuhwrXlGLTU_p-UIu9sdL0XscAkD4vx_LpXhVswFuRMBcMkc7s8
+## Python 字串處理的小技巧
+	https://blog.csdn.net/qq_28219759/article/details/52919233
 
 ## 輸出成EXE
 	http://keejko.blogspot.com/2017/12/python_14.html
@@ -22,6 +26,9 @@
 	|
 放到Rstudio裡面
 	https://buzzorange.com/techorange/2018/04/23/python-in-r/
+
+
+
 # R
 ## 1.RSelenium
 	https://blog.gtwang.org/r/rselenium-r-selenium-browser-web-scraping-tutorial/
