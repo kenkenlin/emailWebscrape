@@ -1,12 +1,8 @@
-import datetime
 import email
 import imaplib
-import mailbox
 import pandas as pd
 import os
 import getpass
-import tqdm
-import time
 import sys
 
 os.getcwd()
@@ -14,18 +10,20 @@ os.getcwd()
 EMAIL_ACCOUNT = input("輸入帳號包含@example.com：\n")
 PASSWORD = getpass.getpass("輸入密碼：\n")
 
-os.system("pause")
-
 
 try:
-    mail = imaplib.IMAP4_SSL('imap.'+EMAIL_ACCOUNT.split("@")[1])
+    imaploc = 'imap.'+EMAIL_ACCOUNT.split("@")[1]
+    mail = imaplib.IMAP4_SSL(imaploc)
     try:
         mail.login(EMAIL_ACCOUNT, PASSWORD)
+        print("登入成功！")
+        os.system("pause")
     except:
-        print("帳號密碼錯誤")
+        print("帳號密碼錯誤\n或在此解除GMAIL低風險應用程式封鎖選項"
+                  +"https://myaccount.google.com/lesssecureapps")
         os.system("pause")
         exit
-except gaierror:
+except:
     print("該網域已不支援此API")
     os.system("pause")
     exit
@@ -41,7 +39,7 @@ Dict = {}
 
 ttrange = 0
 
-for x in range(i-1, i-200,  1):
+for x in range(i-1, i-200, -1):
     latest_email_uid = data[0].split()[x]
     result, email_data = mail.uid('fetch', latest_email_uid, '(RFC822)')
     raw_email = email_data[0][1]
@@ -91,5 +89,10 @@ df_2['Email'] = df_split[1].str.rstrip('>')
 df_2.drop(columns =["Name&Email"], inplace = True) 
 last_col = df_2.pop(df_2.columns[0])
 df_2.insert(2, last_col.name, last_col)
-df_2.to_csv('Target.csv', encoding = 'utf_8_sig')
-os.system("pause")
+try:
+    df_2.to_csv(os.getcwd(),'Target.csv', encoding = 'utf_8_sig')
+    print("輸出的資料儲存在應用程式的目錄位置")
+    os.system("pause")
+except PermissionError:
+    print("資料匯出失敗，請以系統管理員的身分執行")
+    os.system("pause")
