@@ -17,8 +17,19 @@ PASSWORD = getpass.getpass("輸入密碼：\n")
 os.system("pause")
 
 
-mail = imaplib.IMAP4_SSL('imap.gmail.com')
-mail.login(EMAIL_ACCOUNT, PASSWORD)
+try:
+    mail = imaplib.IMAP4_SSL('imap.'+EMAIL_ACCOUNT.split("@")[1])
+    try:
+        mail.login(EMAIL_ACCOUNT, PASSWORD)
+    except:
+        print("帳號密碼錯誤")
+        os.system("pause")
+        exit
+except gaierror:
+    print("該網域已不支援此API")
+    os.system("pause")
+    exit
+
 mail.list()
 mail.select('inbox')
 result, data = mail.uid('search', None, "ALL") # (ALL/UNSEEN)
