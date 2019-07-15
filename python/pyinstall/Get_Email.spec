@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['Get_Email.py'],
-             pathex=['C:\\Users\\Jack\\Documents\\GitHub\\emailWebscrape\\python\\pyinstall'],
+             pathex=['D:\\Users\\aa225\\Documents\\GitHub\\emailWebscrape\\python\\pyinstall'],
              binaries=[],
              datas=[],
              hiddenimports=[],
