@@ -9,7 +9,7 @@ os.getcwd()
 
 EMAIL_ACCOUNT = input("輸入帳號包含@example.com：\n")
 PASSWORD = getpass.getpass("輸入密碼：\n")
-mail = []
+
 try:
     imaploc = 'imap.'+EMAIL_ACCOUNT.split("@")[1]
     mail = imaplib.IMAP4_SSL(imaploc)

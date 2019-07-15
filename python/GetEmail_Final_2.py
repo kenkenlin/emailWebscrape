@@ -25,7 +25,7 @@ try:
         print("帳號密碼錯誤")
         os.system("pause")
         exit
-except :
+except gaierror:
     print("該網域已不支援此API")
     os.system("pause")
     exit

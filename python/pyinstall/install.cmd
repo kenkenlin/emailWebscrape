@@ -1,2 +1,2 @@
-pyinstaller -i icon.ico -F Get_Email_2036.py
+pyinstaller -i icon.ico -F Get_Email.py
 os.system("pause")
