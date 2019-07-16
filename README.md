@@ -1,30 +1,32 @@
 # Python 
-## gmail(³opackage¤£¤Ó¦n¸Ë¡A§Ú¬İ¤£¤ÓÀ´¨ì©³­n«ç»ò·d)
+## é€²åŒ–æˆçœŸæ­£çˆ¬èŸ²é¡çš„ç¬¬ä¸€æ­¥
+https://blog.csdn.net/Neleuska/article/details/80040304
+## gmail(é€™packageä¸å¤ªå¥½è£ï¼Œæˆ‘çœ‹ä¸å¤ªæ‡‚åˆ°åº•è¦æ€éº¼æ)
 	  https://github.com/charlierguo/gmail
-## gmail ¦w¥ş©Ê
+## gmail å®‰å…¨æ€§
 	https://myaccount.google.com/lesssecureapps
 
-## selenium(³o­Ópackage ¸ê®Æ«Ü¦h ¤]«Ü¦hµ{¦¡½X¥i¥H°Ñ¦Ò¡A§ÚÀH«K¶K¤@­Ó)
+## selenium(é€™å€‹package è³‡æ–™å¾ˆå¤š ä¹Ÿå¾ˆå¤šç¨‹å¼ç¢¼å¯ä»¥åƒè€ƒï¼Œæˆ‘éš¨ä¾¿è²¼ä¸€å€‹)
 	  https://crossbrowsertesting.com/blog/test-automation/automate-login-with-selenium/
 	
-## selenium±Ğ¾Ç
-	 1.https://medium.com/@NorthBei/¦bwindows¤W¦w¸Ëpython-selenium-Â²©ö±Ğ¾Ç-eade1cd2d12d
+## seleniumæ•™å­¸
+	 1.https://medium.com/@NorthBei/åœ¨windowsä¸Šå®‰è£python-selenium-ç°¡æ˜“æ•™å­¸-eade1cd2d12d
          2.http://yhhuang1966.blogspot.com/2018/05/python-selenium_27.html
 	 3.https://www.youtube.com/watch?v=rGFB34c6vso
-## IMAP ´¡¥ó
+## IMAP æ’ä»¶
 	https://codehandbook.org/how-to-read-email-from-gmail-using-python/?fbclid=IwAR25NI-diuhwrXlGLTU_p-UIu9sdL0XscAkD4vx_LpXhVswFuRMBcMkc7s8
-## Python ¦r¦ê³B²zªº¤p§Ş¥©
+## Python å­—ä¸²è™•ç†çš„å°æŠ€å·§
 	https://blog.csdn.net/qq_28219759/article/details/52919233
 
-## ¿é¥X¦¨EXE
+## è¼¸å‡ºæˆEXE
 	http://keejko.blogspot.com/2017/12/python_14.html
-¦pªG¦³°İÃDªº¸Ü ¦³¨Ç´¡¥ó¥i¯à­n¥Îcmdªº¤è¦¡­«·s¦w¸Ë
-§â¤W­± ¡¶
+å¦‚æœæœ‰å•é¡Œçš„è©± æœ‰äº›æ’ä»¶å¯èƒ½è¦ç”¨cmdçš„æ–¹å¼é‡æ–°å®‰è£
+æŠŠä¸Šé¢ â–²
 	|
 	|
 	|
 	|
-©ñ¨ìRstudio¸Ì­±
+æ”¾åˆ°Rstudioè£¡é¢
 	https://buzzorange.com/techorange/2018/04/23/python-in-r/
 
 
@@ -35,9 +37,9 @@
 
 ## 2.reticulate (get some problems)
 	https://github.com/rstudio/reticulate/issues/385
-## Gmail API¨Ï¥Î¤èªk
-«è©À«Ü²`ªº¤j¾Ç¥Í
+## Gmail APIä½¿ç”¨æ–¹æ³•
+æ€¨å¿µå¾ˆæ·±çš„å¤§å­¸ç”Ÿ
 	https://rpubs.com/bigbrotherchen/ConnectGmailUsingR
 # Node.JS
-## 1.Node¤Jªù
+## 1.Nodeå…¥é–€
 	https://www.nodebeginner.org/index-zh-tw.html#server-side-javascript
